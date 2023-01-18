@@ -1,0 +1,305 @@
+.facility {
+    width: 100%;
+    height: fit-content;
+    padding: 5rem 0;
+    & .title-facility-section {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 1rem 0;
+        margin-bottom: 8rem;
+        & .first-titel-facility {
+            font-size: 45px;
+            text-transform: capitalize;
+            color: $main-color;
+            font-weight: normal;
+            & .last-titel-facility {
+                display: block;
+                color: $brown-color;
+                font-size: 22px;
+                text-align: center;
+                font-weight: normal;
+                font-style: italic;
+            }
+        }
+        & .info-titel-facility {
+            color: $grey-dark;
+            font-size: 14px;
+            width: 420px;
+            text-align: center;
+            line-height: 24px;
+            margin-top: 5px;
+            text-transform: capitalize;
+        }
+    }
+    & .list-images-facility {
+        width: 100%;
+        height: 420px;
+        background-color: $main-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        & .top-image-left {
+            width: 55%;
+            height: 270px;
+            position: relative;
+            margin-right: 1.5rem;
+            transform: translateY(-75px);
+            border: 6px solid rgba(255, 255, 255, 0.07);
+            & img {
+                width: 100%;
+                height: 100%;
+            }
+            & .massage-cofe-image-bottom-left {
+                width: 330px;
+                height: fit-content;
+                padding: 1.5rem ;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $light-color;
+                position: absolute;
+                top: 85px;
+                left: -44px;
+                border-radius: 5px;
+                transition: .3s linear;
+                box-shadow: -4px 5px 4px 1px #948989a6;
+                & .info-massage-cofe {
+                    font-size: 14px;
+                    color: $main-color;
+                    line-height: 23px;
+                }
+            }
+
+        }
+        & .top-image-right {
+            width: 30%;
+            height: 270px;
+            transform: translateY(-75px);
+            border: 6px solid rgba(255, 255, 255, 0.07);
+            & img {
+                width: 100%;
+                height: 100%;
+            } 
+        }
+        & .bottom-image-left {
+            width: 30%;
+            height: 270px;
+            transform: translateY(-50px);
+            border: 6px solid rgba(255, 255, 255, 0.07);
+            & img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        & .bottom-image-right {
+            width: 55%;
+            height: 270px;
+            position: relative;
+            margin-left: 1rem;
+            transform: translateY(-50px);
+            border: 6px solid rgba(255, 255, 255, 0.07);
+            & img {
+                width: 100%;
+                height: 100%;
+            }
+            & .massage-cofe-image-bottom-right {
+                width: 300px;
+                height: fit-content;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1.5rem ;
+                border-radius: 5px;
+                background-color: $light-color;
+                box-shadow: 4px 5px 4px 1px rgb(148 137 137 / 65%);
+                position: absolute;
+                bottom: 85px;
+                right:  -44px;
+                transition: .3s linear;
+                & .info-massage-cofe {
+                    width: fit-content;
+                    font-size: 14px;
+                    color: $main-color;
+                    line-height: 23px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 375px) and (max-width: 575.98px) {
+
+    .facility {
+        width: 100%;
+        height: fit-content;
+        padding: 5rem 0;
+        & .title-facility-section {
+            margin-bottom: 6rem;
+            & .first-titel-facility {
+                font-size: 25px;
+                & .last-titel-facility {
+                    font-size: 16px;
+                    margin-bottom: 6px;
+                }
+            }
+            & .info-titel-facility {
+                font-size: 12px;
+                width: 280px;
+                text-align: center;
+                line-height: 20px;
+                margin-top: 12px;
+            }
+        }
+        & .list-images-facility {
+            height: 280px;
+            & .top-image-left {
+                width: 90%;
+                height: 200px;
+                margin-right: 0;
+                & .massage-cofe-image-bottom-left {
+                    display: none;
+                }
+            }
+        
+            & .bottom-image-right {
+                width: 90%;
+                height: 200px;
+                margin-left: 0;
+                & .massage-cofe-image-bottom-right {
+                    display: none;
+                }
+            }
+            & .top-image-right  ,
+            & .bottom-image-left {
+                display: none;
+                opacity: 0;
+                transform: scale(0);
+            }
+        }
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .facility {
+        width: 100%;
+        height: fit-content;
+        padding: 5rem 0;
+        & .title-facility-section {
+            margin-bottom: 6rem;
+            & .first-titel-facility {
+                font-size: 35px;
+                & .last-titel-facility {
+                    font-size: 18px;
+                }
+            }
+            & .info-titel-facility {
+                font-size: 13px;
+                width: 364px;
+                line-height: 22px;
+            }
+        }
+        & .list-images-facility {
+            height: 280px;
+            & .top-image-left {
+                width: 60%;
+                height: 200px;
+                margin-right: 1rem;
+                & .massage-cofe-image-bottom-left {
+                    width: 240px;
+                    padding: 1rem;
+                    top: 85px;
+                    left: -19px;
+                    & .info-massage-cofe {
+                        font-size: 12px;
+                        line-height: 19px;
+                    }
+                }
+    
+            }
+            & .top-image-right {
+                width: 25%;
+                height: 200px; 
+            }
+            & .bottom-image-left {
+                width: 25%;
+                height: 200px;
+            }
+            & .bottom-image-right {
+                width: 60%;
+                height: 200px;
+                margin-left: 1rem;
+                & .massage-cofe-image-bottom-right {
+                    width: 240px;
+                    padding: 1rem;
+                    padding: 1rem ;
+                    bottom: 46px;
+                    right:  -25px;
+                    & .info-massage-cofe {
+                        font-size: 12px;
+                        line-height: 19px;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .facility {
+        & .title-facility-section {
+            margin-bottom: 7rem;
+            & .first-titel-facility {
+                font-size: 40px;
+                & .last-titel-facility {
+                    font-size: 20px;
+                }
+            }
+            & .info-titel-facility {
+                width: 390px;
+                margin-top: 10px;
+            }
+        }
+        & .list-images-facility {
+            height: 370px;
+            & .top-image-left {
+                height: 250px;
+                margin-right: 1rem;
+                & .massage-cofe-image-bottom-left {
+                    width: 300px;
+                    padding: 1rem ;
+                    top: 120px;
+                    left: -27px;
+                    & .info-massage-cofe {
+                        font-size: 13px;
+                        line-height: 22px;
+                    }
+                }
+    
+            }
+            & .top-image-right {
+                height: 250px;
+            }
+            & .bottom-image-left {
+                height: 250px;
+            }
+            & .bottom-image-right {
+                height: 250px;
+                & .massage-cofe-image-bottom-right {
+                    padding: 1rem ;
+                    bottom: 45px;
+                    right:  -30px;
+                    & .info-massage-cofe {
+                        font-size: 13px;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+

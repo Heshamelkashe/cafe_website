@@ -1,0 +1,250 @@
+
+header {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    padding: 0 7rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    transition: .3s linear;
+    & .logo {
+        width: 65px;
+        height: 70px;
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    & .links {
+        width: fit-content;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & a {
+            font-size: 13px;
+            letter-spacing: 1px;
+            font-weight: 500;
+            text-transform: capitalize;
+            text-decoration: none;
+            padding:  5px 1.1rem;
+            margin: 0 5px;
+            transition: .2s linear;
+            &:hover span {
+                color: $brown-color;
+            }
+        }
+    }
+    & .nav-contact {
+        width: fit-content;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & a {
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: .2s linear;
+            &:hover span {
+                color: $brown-color;
+            }
+            & i {
+                font-size: 12px;
+                margin-right: 11px;
+            }
+        }
+        & .btn-nav-list {
+            display: none;
+            opacity: 0;
+        }
+    }
+}
+
+
+
+
+// media 
+
+@media (min-width:375px) and (max-width: 575.98px) {
+    header {
+        padding: 0 2rem;
+        & .logo {
+            width: 55px;
+            height: 70px;
+        }
+        & .links {
+            width: 100%;
+            height: 0;
+            background-color: black;
+            flex-direction: column;
+            position: absolute;
+            top: 90px;
+            left: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: .2s linear;
+            &.active-nav {
+                opacity: 1;
+                height: 500px;
+            }
+            & a {
+                width: 100%;
+                height: fit-content;
+                padding: 8px 0;
+                margin: 5px 0;
+                @include algin-item-center ; 
+            }
+        }
+        & .nav-contact {
+            width: fit-content;
+            height: 100%;
+            @include algin-item-center ; 
+            & a {
+                display: none;
+                opacity: 0;
+            }
+            & .btn-nav-list {
+                @include algin-item-center ; 
+                opacity: 1;
+                width: 45px;
+                height: 50px;
+                border: none;
+                background: none;
+                cursor: pointer;
+                & .line_1 ,
+                & .line_2 ,
+                & .line_3 {
+                    fill: none;
+                    stroke-width: 6;
+                    stroke-dasharray: 60 207;
+                    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+                }
+                &.opened .line_1 {
+                    stroke-dasharray: 90 207;
+                    stroke-dashoffset: -134;
+                    stroke-width: 6;
+                }
+                &.opened .line_2 {
+                    stroke-dasharray: 1 60;
+                    stroke-dashoffset: -30;
+                    stroke-width: 6;
+                }
+                &.opened .line_3 {
+                    stroke-dasharray: 90 207;
+                    stroke-dashoffset: -134;
+                    stroke-width: 6;
+                }
+            }
+        }
+    }
+    
+}
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    header {
+        padding: 0 5rem;
+        & .logo {
+            width: 65px;
+            height: 70px;
+        }
+        & .links {
+            width: 100%;
+            height: 0;
+            background-color: black;
+            flex-direction: column;
+            position: absolute;
+            top: 90px;
+            left: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: .2s linear;
+            &.active-nav {
+                opacity: 1;
+                height: 500px;
+            }
+            & a {
+                width: 100%;
+                height: fit-content;
+                padding: 8px 0;
+                margin: 5px 0;
+                @include algin-item-center ; 
+            }
+        }
+        & .nav-contact {
+            width: fit-content;
+            height: 100%;
+            @include algin-item-center ; 
+            & a {
+                display: none;
+                opacity: 0;
+            }
+            & .btn-nav-list {
+                @include algin-item-center ; 
+                opacity: 1;
+                width: 45px;
+                height: 50px;
+                border: none;
+                background: none;
+                cursor: pointer;
+                & .line_1 ,
+                & .line_2 ,
+                & .line_3 {
+                    fill: none;
+                    stroke-width: 6;
+                    stroke-dasharray: 60 207;
+                    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+                }
+                &.opened .line_1 {
+                    stroke-dasharray: 90 207;
+                    stroke-dashoffset: -134;
+                    stroke-width: 6;
+                }
+                &.opened .line_2 {
+                    stroke-dasharray: 1 60;
+                    stroke-dashoffset: -30;
+                    stroke-width: 6;
+                }
+                &.opened .line_3 {
+                    stroke-dasharray: 90 207;
+                    stroke-dashoffset: -134;
+                    stroke-width: 6;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    header {
+        padding: 0 2rem;
+        & .logo {
+            width: 55px;
+            height: 70px;
+        }
+        & .links {
+            & a {
+                font-size: 11px;
+                padding:  5px 10px;
+            }
+        }
+        & .nav-contact {
+            width: fit-content;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & a {
+                font-size: 11px;
+                & i {
+                    font-size: 12px;
+                    margin-right: 11px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,169 @@
+footer {
+    width: 100%;
+    height: fit-content;
+    padding: 0 8rem;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+    margin-top: 3rem;
+    background-color: $main-color;
+    & .first-footer {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-right: 2rem;
+        & .info-footer {
+            width: 250px;
+            height: fit-content;
+            padding-bottom: 1rem;
+            & .logo-footer{
+                width: 65px;
+                height: 75px;
+                & img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            & .about-cafe{
+                line-height: 21px;
+                font-size: 12px;
+                width: 90%;
+                text-transform: capitalize;
+                margin: 1rem 0;
+                color: $grey-dark;
+            }
+            & .social-media {
+                width: 100%;
+                height: fit-content;
+                margin-top: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                & .link-footer {
+                    font-size: 16px;
+                    margin-right: 8px;
+                    padding: 5px 0;
+                    padding-right: 10px;
+                    color: $grey-dark;
+                    text-decoration: none;
+                    transition: .2s linear;
+                    &:hover {
+                        color: $grey-light
+                    }
+                }
+            }
+        }
+        & .facility-links ,
+        & .product-links ,
+        & .support-links {
+            width: fit-content;
+            height: fit-content;
+            display: flex;
+            align-items: stretch;
+            justify-content: start;
+            flex-direction: column;
+            padding-top: 1.5rem;
+            & .title-links {
+                font-size: 19px;
+                letter-spacing: 0.5px;
+                color: $grey-light;
+                font-weight: normal;
+                text-transform: capitalize;
+                margin-bottom: 1rem;
+            }
+            & .link {                        
+                font-size: 11px;
+                letter-spacing: .5px;
+                color:$grey-dark;
+                text-transform: capitalize;
+                margin-bottom: 10px ;
+                text-decoration: none;
+                transition: .2s linear;
+                &:hover {
+                    color: $light-color;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    & .last-footer {
+        width: 100%;
+        height: fit-content;
+        padding: 1.5rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-style: groove;
+        border: 0;
+        border-top: 2px solid rgba(128, 128, 128, 0.308);
+        margin-top: 3rem;
+        & p {
+            font-size: 12px;
+            letter-spacing: .6px;
+            text-transform: capitalize;
+            color: $grey-dark;
+            
+        }
+    }
+
+}
+
+
+
+
+
+
+
+@media (min-width: 375px) and (max-width: 575.98px){
+    footer {
+        padding: 0 3rem;
+        padding-top: 4rem;
+        padding-bottom: 1rem;
+        & .first-footer {
+            padding-right: 0;
+            & .info-footer {
+                width: 180px;
+                & .about-cafe{
+                    line-height: 20px;
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    footer {
+        padding: 0 3rem;
+        padding-top: 4rem;
+        padding-bottom: 1rem;
+        & .first-footer {
+            padding-right: 0;
+            & .info-footer {
+                width: 180px;
+                & .about-cafe{
+                    line-height: 20px;
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    footer {
+        padding: 0 3rem;
+        padding-top: 4rem;
+        padding-bottom: 1rem;
+        & .first-footer {
+            padding-right: 0;
+            & .info-footer {
+                width: 180px;
+                & .about-cafe{
+                    line-height: 20px;
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+}

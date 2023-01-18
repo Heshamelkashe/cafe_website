@@ -1,0 +1,19 @@
+
+
+$main-color : #2f3338;
+$grey-light :#f0f0f0;
+$light-color : white;
+$grey-dark :grey;
+$dark-color:black;
+$brown-color: #d59d66;
+
+
+
+//  mixin
+
+@mixin algin-item-center  {
+
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+}

@@ -1,0 +1,725 @@
+
+.menu {
+    width: 100%;
+    height: fit-content;
+    & .favorite-coffee {
+        width: 100%;
+        height: fit-content;
+        padding: 4rem 8rem;
+        background-color: $main-color;
+        & .places-list {
+            width: 100%;
+            height: fit-content;
+            margin-bottom: 6rem;
+            & p {
+                font-size: 14px;
+                font-weight: 100;
+                letter-spacing: .4px;
+                color: $grey-dark;
+                text-transform: capitalize;
+                margin-bottom: 1.5rem;
+            }
+            & .places-item {
+                width: fit-content;
+                height: fit-content;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                & .item {
+                    width: 110px;
+                    height: fit-content;
+                    margin-right: 2rem;
+                    & .main-number-place {
+                        width: fit-content;
+                        height: fit-content;
+                        display: flex;
+                        align-items: center;
+                        justify-content: start;
+                        margin-bottom: 6px;
+                        & .number-place {
+                            font-size: 50px;
+                            color: $light-color;
+                            font-family: none;
+                        }
+                        & i {
+                            color: $brown-color;
+                            font-size: 22px;
+                            margin-left: 10px;
+                        }
+                    }
+                    & .info-place {
+                        font-size: 13px;
+                        text-transform: capitalize;
+                        color: $grey-light;
+                        letter-spacing: .5px;
+                    }
+                }
+            }
+        }
+        & .favorite-list {
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            & .image-favorite {
+                width: 450px;
+                height: 540px;
+                margin-right: 13rem;
+                border: 6px solid #ffffff13;
+                position: relative;
+                & img {
+                    width: 100%;
+                    height: 100%;
+                }
+                & .massage-favorite {
+                    width: 300px;
+                    height: fit-content;
+                    padding: 1.5rem 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    background-color: $light-color;
+                    position: absolute;
+                    bottom: 80px;
+                    right: -70px;
+                    border-radius: 5px;
+                    box-shadow: -4px 5px 4px 1px #948989a6;
+                    transition: .3s linear;
+                    & span {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        background-color: $main-color;
+                        transform: translateX(-18px);
+                        & i {
+                            color: $light-color;
+                            font-size: 14px;
+                        }
+                    }
+                    & p {
+                        width: 80%;
+                        color: $main-color;
+                        font-size: 13px;
+                        line-height: 22px;
+                        text-transform: capitalize;
+                    }
+    
+                }
+            }
+            & .info-favorite {
+                width: fit-content;
+                height: fit-content;
+                & h2 {
+                    font-size: 55px;
+                    font-weight: 100;
+                    text-transform: capitalize;
+                    font-family: emoji;
+                    width: 350px;
+                    line-height: 60px;
+                    margin-bottom: 1rem;
+                    color: $light-color;
+                    & span {
+                        color: $brown-color;
+                        display: block;
+                        font-style: italic;
+                        font-size: 20px;
+                        text-transform: capitalize;
+                        font-weight: 100;
+                    }
+                }
+                & p {
+                    font-size: 17px;
+                    text-transform: capitalize;
+                    width: 340px;
+                    font-weight: 100;
+                    line-height: 27px;
+                    color: $grey-dark;
+                }
+                & .list-coffee {
+                    width: 100%;
+                    height: fit-content;
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    margin-top: 1.5rem;
+                    margin-bottom: 1rem;
+                    & button {
+                        width: fit-content;
+                        height: fit-content;
+                        color: $light-color;
+                        padding: 8px 0;
+                        padding-right: 8px;
+                        font-size: 25px;
+                        font-family: emoji;
+                        font-weight: 100;
+                        letter-spacing: .5px;
+                        margin-right: 3rem;
+                        background: none;
+                        border: 0;
+                        text-transform: capitalize;
+                        cursor: pointer;
+                        outline: none;
+                        &.active-btn-menu {
+                            color: $brown-color;
+                        }
+                        &:hover {
+                            color: $brown-color;
+                        }
+                    }
+                }
+                & .more-favorite {
+                    width: fit-content;
+                    height: fit-content;
+                    font-size: 15px;
+                    letter-spacing: .6px;
+                    font-weight: 100;
+                    color: $grey-light;
+                    background: none;
+                    padding: 10px  0 ;
+                    border: 0;
+                    outline: none;
+                    text-transform: capitalize;
+                    cursor: pointer;
+                    transition: .2s linear;
+                    &:hover {
+                        color: $grey-dark;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (min-width: 375px) and (max-width: 575.98px){
+    .menu {
+        & .favorite-coffee {
+            padding:  2rem;
+            & .places-list {
+                margin-top: 5rem;
+                margin-bottom: 4rem;
+                & p {
+                    font-size: 12px;
+                    text-align: center;
+                    margin-bottom: 2rem;
+                }
+                & .places-item {
+                    width: 100%;
+                    height: fit-content;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    & .item {
+                        width: fit-content;
+                        height: fit-content;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        margin-right: 0;
+                        & .main-number-place {
+                            width: fit-content;
+                            height: fit-content;
+                            display: flex;
+                            align-items: center;
+                            justify-content: start;
+                            margin-bottom: 6px;
+                            & .number-place {
+                                font-size: 26px;
+                            }
+                            & i {
+                                font-size: 16px;
+                                margin-left: 4px;
+                            }
+                        }
+                        & .info-place {
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+            & .favorite-list {
+                width: 100%;
+                height: fit-content;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column-reverse;
+                & .image-favorite {
+                    width: 300px;
+                    height: 350px;
+                    margin-right: 0;
+                    border: 6px solid #ffffff13;
+                    position: relative;
+                    & img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                    & .massage-favorite {
+                        width: 250px;
+                        padding: 1rem 0;
+                        bottom: 33px;
+                        right: -26px;
+                        & p {
+                            font-size: 11px;
+                            line-height: 19px;
+                        }
+                    }
+                }
+                & .info-favorite {
+                    margin-bottom: 1.5rem;
+                    & h2 {
+                        font-size: 20px;
+                        width: 100%;
+                        line-height: 35px;
+                        margin-bottom: 7px;
+                        text-align: center;
+                        & span {
+                            font-size: 15px;
+                        }
+                    }
+                    & p {
+                        font-size: 11px;
+                        width: 74%;
+                        text-align: center;
+                        font-weight: 400;
+                        line-height: 20px;
+                        color: grey;
+                        margin: 0 auto;
+                    }
+                    & .list-coffee {
+                        width: 100%;
+                        height: fit-content;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                        margin-top: 1.5rem;
+                        margin-bottom: 1rem;
+                        & button {
+                            padding: 5px 0;
+                            padding-right: 0;
+                            font-size: 18px;
+                            margin-right: 0;
+                        }
+                    }
+                    & .more-favorite {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .menu {
+        & .favorite-coffee {
+            padding:  2rem;
+            & .places-list {
+                margin-top: 5rem;
+                margin-bottom: 4rem;
+                & p {
+                    font-size: 14px;
+                    text-align: center;
+                    margin-bottom: 2rem;
+                }
+                & .places-item {
+                    width: 100%;
+                    height: fit-content;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    & .item {
+                        width: fit-content;
+                        height: fit-content;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        margin-right: 0;
+                        margin: 0 15px;
+                        & .main-number-place {
+                            width: fit-content;
+                            height: fit-content;
+                            display: flex;
+                            align-items: center;
+                            justify-content: start;
+                            margin-bottom: 6px;
+                            & .number-place {
+                                font-size: 26px;
+                            }
+                            & i {
+                                font-size: 16px;
+                                margin-left: 4px;
+                            }
+                        }
+                        & .info-place {
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+            & .favorite-list {
+                width: 100%;
+                height: fit-content;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column-reverse;
+                & .image-favorite {
+                    width: 300px;
+                    height: 350px;
+                    margin-right: 0;
+                    border: 6px solid #ffffff13;
+                    position: relative;
+                    & img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                    & .massage-favorite {
+                        width: 250px;
+                        padding: 1rem 0;
+                        bottom: 33px;
+                        right: -26px;
+                        & p {
+                            font-size: 11px;
+                            line-height: 19px;
+                        }
+                    }
+                }
+                & .info-favorite {
+                    margin-bottom: 1.5rem;
+                    & h2 {
+                        font-size: 20px;
+                        width: 100%;
+                        line-height: 35px;
+                        margin-bottom: 7px;
+                        text-align: center;
+                        & span {
+                            font-size: 15px;
+                        }
+                    }
+                    & p {
+                        font-size: 11px;
+                        width: 74%;
+                        text-align: center;
+                        font-weight: 400;
+                        line-height: 20px;
+                        color: grey;
+                        margin: 0 auto;
+                    }
+                    & .list-coffee {
+                        width: 100%;
+                        height: fit-content;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: 1.5rem;
+                        margin-bottom: 1rem;
+                        & button {
+                            padding: 5px 0;
+                            padding-right: 0;
+                            font-size: 18px;
+                            margin-right: 0;
+                            margin: 0 1rem;
+                        }
+                    }
+                    & .more-favorite {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .menu {
+        & .favorite-coffee {
+            padding: 4rem 3rem;
+            & .places-list {
+                margin-bottom: 4rem;
+                & p {
+                    font-size: 13px;
+                }
+                & .places-item {
+                    & .item {
+                        width: fit-content;
+                        height: fit-content;
+                        margin-right: 2rem;
+                        & .main-number-place {
+                            width: fit-content;
+                            height: fit-content;
+                            display: flex;
+                            align-items: center;
+                            justify-content: start;
+                            margin-bottom: 6px;
+                            & .number-place {
+                                font-size: 35px;
+                            }
+                            & i {
+                                font-size: 18px;
+                                margin-left: 6px;
+                            }
+                        }
+                        & .info-place {
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+            & .favorite-list {
+                width: 100%;
+                height: fit-content;
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                & .image-favorite {
+                    width: 350px;
+                    height: 440px;
+                    margin-right: 5rem;
+                    & .massage-favorite {
+                        width: 250px;
+                        padding: 1rem 0;
+                        bottom: 35px;
+                        right: -44px;
+                        & p {
+                            width: 80%;
+                            color: $main-color;
+                            font-size: 12px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+                & .info-favorite {
+                    & h2 {
+                        font-size: 30px;
+                        width: 200px;
+                        line-height: 37px;
+                        margin-bottom: 6px;
+                        & span {
+                            font-size: 14px;
+                        }
+                    }
+                    & p {
+                        font-size: 12px;
+                        width: 240px;
+                        line-height: 21px;
+                    }
+                    & .list-coffee {
+                        margin-top: 1rem;
+                        & button {
+                            padding: 5px 0;
+                            padding-right: 0px;
+                            font-size: 17px;
+                            margin-right: 2rem;
+                        }
+                    }
+                    & .more-favorite {
+                        font-size: 11px;
+                        padding: 5px 0;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .menu {
+        & .favorite-coffee {
+            width: 100%;
+            height: fit-content;
+            padding: 4rem 3rem;
+            background-color: $main-color;
+            & .places-list {
+                width: 100%;
+                height: fit-content;
+                margin-bottom: 6rem;
+                & p {
+                    font-size: 14px;
+                    font-weight: 100;
+                    letter-spacing: .4px;
+                    color: $grey-dark;
+                    text-transform: capitalize;
+                    margin-bottom: 1.5rem;
+                }
+                & .places-item {
+                    width: fit-content;
+                    height: fit-content;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    & .item {
+                        width: 110px;
+                        height: fit-content;
+                        margin-right: 1rem;
+                        & .main-number-place {
+                            width: fit-content;
+                            height: fit-content;
+                            display: flex;
+                            align-items: center;
+                            justify-content: start;
+                            margin-bottom: 6px;
+                            & .number-place {
+                                font-size: 35px;
+                                color: $light-color;
+                                font-family: none;
+                            }
+                            & i {
+                                color: $brown-color;
+                                font-size: 19px;
+                                margin-left: 10px;
+                            }
+                        }
+                        & .info-place {
+                            font-size: 12px;
+                            text-transform: capitalize;
+                            color: $grey-light;
+                            letter-spacing: .5px;
+                        }
+                    }
+                }
+            }
+            & .favorite-list {
+                & .image-favorite {
+                    width: 450px;
+                    height: 540px;
+                    margin-right: 6rem;
+                    border: 6px solid #ffffff13;
+                    position: relative;
+                    & img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                    & .massage-favorite {
+                        width: 300px;
+                        height: fit-content;
+                        padding: 1.5rem 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: start;
+                        background-color: $light-color;
+                        position: absolute;
+                        bottom: 80px;
+                        right: -70px;
+                        border-radius: 5px;
+                        box-shadow: -4px 5px 4px 1px #948989a6;
+                        transition: .3s linear;
+                        & span {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 35px;
+                            height: 35px;
+                            border-radius: 50%;
+                            background-color: $main-color;
+                            transform: translateX(-18px);
+                            & i {
+                                color: $light-color;
+                                font-size: 14px;
+                            }
+                        }
+                        & p {
+                            width: 80%;
+                            color: $main-color;
+                            font-size: 13px;
+                            line-height: 22px;
+                            text-transform: capitalize;
+                        }
+        
+                    }
+                }
+                & .info-favorite {
+                    width: fit-content;
+                    height: fit-content;
+                    & h2 {
+                        font-size: 55px;
+                        font-weight: 100;
+                        text-transform: capitalize;
+                        font-family: emoji;
+                        width: 350px;
+                        line-height: 60px;
+                        margin-bottom: 1rem;
+                        color: $light-color;
+                        & span {
+                            color: $brown-color;
+                            display: block;
+                            font-style: italic;
+                            font-size: 20px;
+                            text-transform: capitalize;
+                            font-weight: 100;
+                        }
+                    }
+                    & p {
+                        font-size: 17px;
+                        text-transform: capitalize;
+                        width: 340px;
+                        font-weight: 100;
+                        line-height: 27px;
+                        color: $grey-dark;
+                    }
+                    & .list-coffee {
+                        width: 100%;
+                        height: fit-content;
+                        display: flex;
+                        align-items: center;
+                        justify-content: start;
+                        margin-top: 1.5rem;
+                        margin-bottom: 1rem;
+                        & button {
+                            width: fit-content;
+                            height: fit-content;
+                            color: $light-color;
+                            padding: 8px 0;
+                            padding-right: 8px;
+                            font-size: 25px;
+                            font-family: emoji;
+                            font-weight: 100;
+                            letter-spacing: .5px;
+                            margin-right: 3rem;
+                            background: none;
+                            border: 0;
+                            text-transform: capitalize;
+                            cursor: pointer;
+                            outline: none;
+                            &.active-btn-menu {
+                                color: $brown-color;
+                            }
+                            &:hover {
+                                color: $brown-color;
+                            }
+                        }
+                    }
+                    & .more-favorite {
+                        width: fit-content;
+                        height: fit-content;
+                        font-size: 15px;
+                        letter-spacing: .6px;
+                        font-weight: 100;
+                        color: $grey-light;
+                        background: none;
+                        padding: 10px  0 ;
+                        border: 0;
+                        outline: none;
+                        text-transform: capitalize;
+                        cursor: pointer;
+                        transition: .2s linear;
+                        &:hover {
+                            color: $grey-dark;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

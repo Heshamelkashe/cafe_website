@@ -1,0 +1,397 @@
+
+.review {
+    width: 100%;
+    height: fit-content;
+    padding: 0 8rem;
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    & .list-Review {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & .text-review {
+            width: 340px;
+            height: 100%;
+            & .title-review {
+                font-size: 40px;
+                line-height: 45px;
+                text-transform: capitalize;
+                font-weight: normal;
+                color: $main-color;
+                font-family: emoji;
+                & .fitst-title-review {
+                    font-size: 20px;
+                    color: $brown-color;
+                    display: block;
+                    font-style: italic;
+                }
+            }
+            & p {
+                font-size: 14px;
+                color: $grey-dark;
+                text-transform: capitalize;
+                line-height: 20px;
+                margin-top: 10px;
+            }
+            & .buttons-review {
+                width: 100%;
+                height: fit-content;
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                margin-top: 1rem;
+                & button {
+                    padding: 10px 0;
+                    margin-right: 3rem;
+                    font-size: 14px;
+                    font-weight: 100;
+                    letter-spacing: .6px;
+                    background: none;
+                    outline: none;
+                    border: 0;
+                    cursor: pointer;
+                    text-transform: capitalize;
+                    transition: 0.3s linear;
+                    &.valid {
+                        color: $main-color;
+                        cursor: pointer;
+                        font-weight: 600;
+                    }
+                    &.not-valid {
+                        color: $grey-dark;
+                        cursor: no-drop;
+                    }
+                }
+            }
+        }
+        & .reviews {
+            width: 600px;
+            height: 260px;
+            overflow: hidden;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            margin-right: 2rem;
+            & .users-list {
+                width: fit-content;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: .5s linear;
+                & .review-user {
+                    width: 270px;
+                    height: fit-content;
+                    padding: 1rem ;
+                    margin: 1rem;
+                    cursor: grab;
+                    background-color: $light-color;
+                    transition: .2s linear;
+                    & .user-massage {
+                        width: 100%;
+                        height: fit-content;
+                        font-size: 13px;
+                        color: $main-color;
+                        line-height: 21px;
+                        margin-bottom: 10px;
+                    }
+                    & .from-user {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        & img {
+                            width: 55px;
+                            height: 55px;
+                            border-radius: 50%;
+                            padding: 3px;
+                            background-color: $brown-color;
+                        }
+                        & .info-user {
+                            width: fit-content;
+                            height: fit-content;
+                            line-height: 16px;
+                            & .name-user {
+                                display: block;
+                                font-size: 11px;
+                                text-transform: capitalize;
+                                color: $main-color;
+                                font-weight: bold;
+                                letter-spacing: 0.5px;
+                            }
+                            & .about-user {
+                                font-size: 11px;
+                                color: $grey-dark;
+                            }
+                        }
+                    }
+                    &.active-user {
+                        background-color: $main-color;
+                        transform: translateY(-20px);
+                        & .user-massage {
+                            color: $grey-dark;
+                        }
+                        & .from-user {
+                            & img {
+                                background-color: $grey-light;
+                            }
+                            & .info-user {
+                                & .name-user {
+                                    color: $light-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+    
+    }
+    & .location-cafe {
+        width: 100%;
+        height: fit-content;
+        margin-top: 4rem ;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        & h3 {
+            font-size: 40px;
+            width: 220px;
+            font-weight: 100;
+            font-family: emoji;
+            text-transform: capitalize;
+            line-height: 46px;
+            color: $main-color;
+        }
+        
+        & p{
+            font-size: 12px;
+            text-transform: capitalize;
+            width: 300px;
+            line-height: 22px;
+            text-align: center;
+            color: $grey-dark;
+            & span {
+                font-size: 13px ;
+                font-style: italic;
+                color: $main-color;
+                font-weight: bold;
+            }
+        }
+        & .btn-location {
+            width: 145px;
+            height: 39px;
+            font-size: 13px;
+            text-transform: capitalize;
+            background: $main-color;
+            color: $light-color;
+            letter-spacing: .6px;
+            border: 0;
+            cursor: pointer;
+            box-shadow: 0px 0px 9px 2px #ffffff82;
+        }
+    }
+}
+
+@media (min-width: 375px) and (max-width: 575.98px) {
+    .review {
+        padding: 0 2rem;
+        & .list-Review {
+            flex-wrap: wrap;
+            & .text-review {
+                width: 340px;
+                height: fit-content;
+                & .title-review {
+                    text-align: center;
+                    padding: 0 1rem;
+                    font-size: 25px;
+                    line-height: 30px;
+                    & .fitst-title-review {
+                        font-size: 17px;
+                    }
+                }
+                & p {
+                    font-size: 12px;
+                    padding: 0 1rem;
+                    text-align: center;
+                    line-height: 19px;
+                    margin-top: 12px;
+                }
+                & .buttons-review {
+                    justify-content: center;
+                    & button {
+                        padding: 10px 1.5rem;
+                        margin-right: 0;
+                    }
+                }
+            }
+            & .reviews {
+                width: 320px;
+                margin-right: 0;
+            }
+        }
+        & .location-cafe {
+            margin-top: 0 ;
+            justify-content: center;
+            & h3 {
+                font-size: 30px;
+                text-align: center;
+                width: 300px;
+                line-height: 32px;
+                margin-bottom: 12px;
+            }
+            & p{
+                font-size: 11px;
+                width: 260px;
+                line-height: 20px;
+                & span {
+                    font-size: 12px ;
+                }
+            }
+            & .btn-location {
+                width: 130px;
+                height: 35px;
+                font-size: 12px;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .review {
+        padding: 0 2rem;
+        margin-top: 2rem;
+        & .list-Review {
+            & .text-review {
+                width: 250px;
+                height: fit-content;
+                & .title-review {
+                    font-size: 28px;
+                    line-height: 33px;
+                    & .fitst-title-review {
+                        font-size: 18px;
+                    }
+                }
+                & p {
+                    font-size: 12px;
+                    text-transform: capitalize;
+                    line-height: 18px;
+                    margin-top: 12px;
+                    width: 90%;
+                }
+            }
+            & .reviews {
+                width: 320px;
+                margin-right: 0;
+            }
+        }
+        & .location-cafe {
+            margin-top: 2rem ;
+            & h3 {
+                width: 120px;
+                font-size: 24px;
+                line-height: 31px;
+            }
+            & p{
+                font-size: 11px;
+                width: 200px;
+                line-height: 19px;
+                & span {
+                    font-size: 10px ;
+                }
+            }
+            & .btn-location {
+                width: 120px;
+                height: 35px;
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .review {
+        padding: 0 3rem;
+        margin-top: 2rem;
+        & .list-Review {
+            & .text-review {
+                width: 320px;
+                height: fit-content;
+                & .title-review {
+                    font-size: 28px;
+                    line-height: 35px;
+                    & .fitst-title-review {
+                        font-size: 17px;
+                    }
+                }
+                & p {
+                    font-size: 12px;
+                    line-height: 17px;
+                }
+                & .buttons-review {
+                    width: 100%;
+                    height: fit-content;
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    margin-top: 1rem;
+                    & button {
+                        padding: 10px 0;
+                        margin-right: 3rem;
+                        font-size: 14px;
+                        font-weight: 100;
+                        letter-spacing: .6px;
+                        background: none;
+                        outline: none;
+                        border: 0;
+                        cursor: pointer;
+                        text-transform: capitalize;
+                        transition: 0.3s linear;
+                        &.valid {
+                            color: $main-color;
+                            cursor: pointer;
+                            font-weight: 600;
+                        }
+                        &.not-valid {
+                            color: $grey-dark;
+                            cursor: no-drop;
+                        }
+                    }
+                }
+            }
+            & .reviews {
+                width: 320px;
+                margin-right: 0;
+            }
+        }
+        & .location-cafe {
+            margin-top: 2rem ;
+            & h3 {
+                font-size: 30px;
+                width: 150px;
+                line-height: 37px;
+            }
+            & p{
+                font-size: 12px;
+                width: 260px;
+                line-height: 20px;
+                & span {
+                    font-size: 11px ;
+                }
+            }
+            & .btn-location {
+                width: 130px;
+                height: 35px;
+                font-size: 12px;
+            }
+        }
+    }
+}
