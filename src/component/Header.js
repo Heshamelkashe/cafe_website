@@ -52,8 +52,6 @@ export default class Header extends Component {
     }
 
 
-
-
     render() {
         return (
             <header style={{ background: this.state.background }}>
@@ -94,7 +92,7 @@ export default class Header extends Component {
                             <path className="line_3 " stroke= {this.state.linkColor} d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
                         </svg>
                     </button>
-                    <a href="cal:010200545" style={{ color: this.state.linkColor }} className='phone-number'>
+                    <a href="tel:02010022552041" style={{ color: this.state.linkColor }} className='phone-number'>
                         <i className="fa-solid fa-phone" style={{ color: this.state.iconPhone }}></i>
                         <span>(+02) 0100-2255-2041</span>
                     </a>

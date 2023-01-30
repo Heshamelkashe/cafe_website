@@ -30,7 +30,8 @@ class Favorite extends Component {
         MassegeScele:"scale(0)",
         startCount: false ,
         Image: Favorite1,
-        massageP:"I really love the Cappuccino. the coffee was very smooth",
+        massageP: "I really love the Cappuccino. the coffee was very smooth",
+        loadingDiv:"none",
     }
 
     CountDataNumber(num) {
@@ -45,7 +46,7 @@ class Favorite extends Component {
                 num.textContent++
             }
 
-        }, 1000 / dataNumber);
+        }, 2000 / dataNumber);
 
     };
 
@@ -78,11 +79,17 @@ class Favorite extends Component {
     // buttens Chang Image favorite
     btnCappuccino = (event) => {
 
-        // chang Image
+        this.setState({ loadingDiv: "flex" });
+
+        // chang Image and Massage
         this.setState({
             Image:Favorite1 ,
-            massageP:"I really love the Cappuccino. the coffee was very smooth",
+            massageP: "I really love the Cappuccino. the coffee was very smooth",
         });
+
+        setTimeout(() => {
+            this.setState({ loadingDiv: "none" });
+        }, 1500)
 
         const el = event.currentTarget;
         const buttons = document.querySelectorAll(".btn-favorite")
@@ -92,13 +99,20 @@ class Favorite extends Component {
 
     }
 
-    btnLate = (event) =>  {
+    btnLate = (event) => {
         
-        // chang Image
+        // show loading div image
+        this.setState({ loadingDiv: "flex" })
+        
+        // chang Image and Massage
         this.setState({
             Image:Favorite2 ,
-            massageP:"The coarse texture of brown sugar helps exfoliate the skin and boosts circulation."
+            massageP: "The coarse texture of brown sugar helps exfoliate the skin and boosts circulation.",
         });
+
+        setTimeout(() => {
+            this.setState({ loadingDiv: "none" })
+        },1500)
 
         const el = event.currentTarget;
         const buttons = document.querySelectorAll(".btn-favorite");
@@ -107,13 +121,21 @@ class Favorite extends Component {
         el.classList.add("active-btn-menu");
 
     }
+
     btnArabica = (event) => {
 
-        // chang Image
+        // show loading div image
+        this.setState({ loadingDiv: "flex" });
+
+        // chang Image and Massage
         this.setState({
             Image:Favorite3 ,
             massageP:"aBelieve it or not, coffee has the fantastic ability to tone your skin and reduce cellulite. ",
         });
+
+        setTimeout(() => {
+            this.setState({ loadingDiv: "none" });
+        },1500)
 
         const el = event.currentTarget;
         const buttons = document.querySelectorAll(".btn-favorite")
@@ -127,23 +149,23 @@ class Favorite extends Component {
         return (
             <div className='favorite-coffee' id='favorite-coffee'>
                 <div className='places-list'>
-                    <p data-aos="fade-up"  data-aos-duration="1500">enjoy your coffee in our comfortable place </p>
+                    <p data-aos="fade-left"  data-aos-duration="1500">enjoy your coffee in our comfortable place </p>
                     <div className='places-item'>
-                        <div className='item'>
+                        <div className='item' data-aos="fade-right"  data-aos-duration="3000">
                             <div className='main-number-place'>
                                 <span className='number-place' data-number='25'> 0</span>
                                 <i className="fa-solid fa-plus"></i>
                             </div>
                             <span className='info-place'>private room</span>
                         </div>
-                        <div className='item'>
+                        <div className='item' data-aos="fade-right"  data-aos-duration="1500">
                             <div className='main-number-place'>
                                 <span className='number-place' data-number='40'> 0 </span>
                                 <i className="fa-solid fa-plus"></i>
                             </div>
                             <span className='info-place'>event space</span>
                         </div>
-                        <div className='item'>
+                        <div className='item' data-aos="fade-right"  data-aos-duration="500">
                             <div className='main-number-place'>
                                 <span className='number-place' data-number='15'> 0 </span>
                                 <i className="fa-solid fa-plus"></i>
@@ -154,20 +176,25 @@ class Favorite extends Component {
                 </div>
                 <div className='favorite-list'>
                     <div className='image-favorite'>
-                        <img src={this.state.Image} alt='menu'/>
-                            <div className='massage-favorite' style={{ opacity:this.state.MassageOpacity , transform:this.state.MassegeScele }}>
+                        <img src={this.state.Image} alt='menu' />
+                        <div className='massage-favorite' style={{ opacity:this.state.MassageOpacity , transform:this.state.MassegeScele }}>
                             <span>
                                 <i className="fa-regular fa-heart"></i>
                             </span>
                             <p> {this.state.massageP} </p>
                         </div>
+                        <div className='loading-image' style={{display:this.state.loadingDiv}}>
+                            <div className="loading">
+                                Loading
+                            </div>
+                        </div>
                     </div>
                     <div className='info-favorite'>
-                        <h2 data-aos="fade-up"  data-aos-duration="1500">
+                        <h2 data-aos="fade-up"  data-aos-duration="500">
                             <span data-aos="fade-up"  data-aos-duration="500">our coffee</span>
                             chose your favorite coffee
                         </h2>
-                        <p data-aos="fade-up"  data-aos-duration="3000"> more than 100+ type of coffee
+                        <p data-aos="fade-up"  data-aos-duration="1500"> more than 100+ type of coffee
                             are ready to serve by our professionals.
                         </p>
                         <div className='list-coffee' data-aos="fade-up"  data-aos-duration="3000">
@@ -175,7 +202,9 @@ class Favorite extends Component {
                             <button className='btn-favorite' onClick={this.btnLate}>late</button>
                             <button className='btn-favorite' onClick={this.btnArabica}>arabica</button>
                         </div>
-                        <button className='more-favorite'> more menu</button>
+                        <div className='btns-menu-list' data-aos="fade-up"  data-aos-duration="3000">
+                            <button className='more-favorite'> more menu</button>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -600,7 +600,8 @@ header .nav-contact .btn-nav-list {
   right: -70px;
   border-radius: 5px;
   box-shadow: -4px 5px 4px 1px rgba(148, 137, 137, 0.6509803922);
-  transition: 0.3s linear;
+  transition: 0.7s linear;
+  z-index: 2;
 }
 .menu .favorite-coffee .favorite-list .image-favorite .massage-favorite span {
   display: flex;
@@ -622,6 +623,63 @@ header .nav-contact .btn-nav-list {
   font-size: 13px;
   line-height: 22px;
   text-transform: capitalize;
+}
+.menu .favorite-coffee .favorite-list .image-favorite .loading-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #2f3338;
+}
+.menu .favorite-coffee .favorite-list .image-favorite .loading-image .loading {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 2px solid rgba(49, 48, 48, 0.7529411765);
+  border-radius: 50%;
+  font-size: 10px;
+  color: #f0f0f0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.226);
+}
+.menu .favorite-coffee .favorite-list .image-favorite .loading-image .loading::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  border: 0.5px solid transparent;
+  border-top: 0.5px solid #f0f0f0;
+  border-right: 0.5px solid #f0f0f0;
+  border-radius: 50%;
+  -webkit-animation: animate 2s linear infinite;
+          animation: animate 2s linear infinite;
+}
+@-webkit-keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .menu .favorite-coffee .favorite-list .info-favorite {
   width: -webkit-fit-content;
@@ -702,11 +760,12 @@ header .nav-contact .btn-nav-list {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  font-size: 15px;
+  font-size: 11px;
   letter-spacing: 0.6px;
   font-weight: 100;
-  color: #f0f0f0;
+  color: grey;
   background: none;
+  margin-top: 1.5rem;
   padding: 10px 0;
   border: 0;
   outline: none;
@@ -715,7 +774,7 @@ header .nav-contact .btn-nav-list {
   transition: 0.2s linear;
 }
 .menu .favorite-coffee .favorite-list .info-favorite .more-favorite:hover {
-  color: grey;
+  color: #f0f0f0;
   text-decoration: underline;
 }
 
@@ -1370,7 +1429,7 @@ header .nav-contact .btn-nav-list {
   top: 85px;
   left: -44px;
   border-radius: 5px;
-  transition: 0.3s linear;
+  transition: 0.6s linear;
   box-shadow: -4px 5px 4px 1px rgba(148, 137, 137, 0.6509803922);
 }
 .facility .list-images-facility .top-image-left .massage-cofe-image-bottom-left .info-massage-cofe {
@@ -1425,7 +1484,7 @@ header .nav-contact .btn-nav-list {
   position: absolute;
   bottom: 85px;
   right: -44px;
-  transition: 0.3s linear;
+  transition: 0.6s linear;
 }
 .facility .list-images-facility .bottom-image-right .massage-cofe-image-bottom-right .info-massage-cofe {
   width: -webkit-fit-content;
