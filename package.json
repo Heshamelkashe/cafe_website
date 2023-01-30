@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "homepage":"https://Heshamelkashe.github.io/cafe_webSite",
+    "homepage":"https://Heshamelkashe.github.io/Cafe.com",
     "@splidejs/react-splide": "^0.7.12",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
